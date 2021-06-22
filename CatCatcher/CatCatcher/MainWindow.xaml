@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CatCatcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Cat Catcher" Height="462" Width="708" MinHeight="410" MinWidth="586" WindowStartupLocation="CenterScreen">
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition MinWidth="150" Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition MinHeight="300" Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.ColumnSpan="2">
+                <Label Content="Cat Catcher" FontSize="35" HorizontalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1" Margin="20, 5, 20, 20">
+                <Image x:Name="videoPlayer" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Media/splashScreen.jpg"/>
+            </Grid>
+
+            <StackPanel Grid.Column="1" Grid.Row="1" Margin="0, 0, 20, 0">
+                <Label Content="Dispos:itivo" HorizontalAlignment="Left" FontSize="12"/>
+                <ComboBox x:Name="comboBox"
+                  Margin="0, 0, 0, 10"
+                  DisplayMemberPath="Name"
+                  ItemsSource="{Binding VideoDevices}"
+                  SelectedItem="{Binding CurrentDevice}" SelectionChanged="ComboBox_SelectionChanged" />
+                <Button x:Name="btnStart" Content="INICIAR" Margin="0, 0, 0, 10" Height="30" Click="btnStart_Click"/>
+                <Button Content="DETENER" Height="30" Click="btnStop_Click"/>
+                <Label x:Name="lblEstado" Content="Desactivado..." HorizontalAlignment="Center" FontSize="18"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="2" Margin="0, 0, 20, 0">
+                <Button x:Name="btnChangeGlypho" Content="CAMBIAR GLYPHO" Margin="0, 0, 0, 10" Height="30" Click="BtnChangeGlypho_Click"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Window>
