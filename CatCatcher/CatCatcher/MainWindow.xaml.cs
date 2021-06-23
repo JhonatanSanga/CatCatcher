@@ -60,6 +60,10 @@ namespace CatCatcher
             InitializeComponent();
             this.DataContext = this;
             GetVideoDevices();
+
+
+            
+
             this.Closing += MainWindow_Closing;
         }
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -74,7 +78,7 @@ namespace CatCatcher
         {
             StartCamera();
         }
-
+        byte count = 0;//contador para que haga una busqueda cada 5 frames
         private void video_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
             try
@@ -82,8 +86,37 @@ namespace CatCatcher
                 BitmapImage bi;
                 using (var bitmap = (Bitmap)eventArgs.Frame.Clone())
                 {
+                    Application.Current.Dispatcher.Invoke(new Action(() =>
+                    {
+
+                        GlyphRecognition.GlyphRecognizer glyphRecognizer;
+                        glyphRecognizer = new GlyphRecognition.GlyphRecognizer(new GlyphRecognition.GlyphDatabase(5));
+                        glyphRecognizer.GlyphDatabase.Add(new GlyphRecognition.Glyph("nuevo", new byte[,] {
+                            { 0, 0, 0, 0, 0},
+                            { 0, 1, 1, 0, 0},
+                            { 0, 0, 1, 1, 0},
+                            { 0, 1, 1, 0, 0},
+                            { 0, 0, 0, 0, 0}}));
+
+                        count++;
+                        if (count >= 5)
+                        {
+                            count = 0;///////////////////////////////////////
+                            if (glyphRecognizer.FindGlyphs(bitmap).Count > 1)
+                            {
+                                lblFind.Foreground = System.Windows.Media.Brushes.LightGreen;
+                                lblFind.Content = "Encontrado";
+                            }
+                            else
+                            {
+                                lblFind.Foreground = System.Windows.Media.Brushes.Red;
+                                lblFind.Content = "No encontrado";
+                            }
+                        }
+                        //Dispatcher.BeginInvoke(new ThreadStart(delegate { imageCapture.Source = bi; }));
+                    }));
                     bi = bitmap.ToBitmapImage();////
-                    
+                    bi.Freeze();
                 }
 
 

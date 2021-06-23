@@ -34,6 +34,7 @@
                 <Button x:Name="btnStart" Content="INICIAR" Margin="0, 0, 0, 10" Height="30" Click="btnStart_Click"/>
                 <Button Content="DETENER" Height="30" Click="btnStop_Click"/>
                 <Label x:Name="lblEstado" Content="Desactivado..." HorizontalAlignment="Center" FontSize="18"/>
+                <Label x:Name="lblFind" Content="NONE..." HorizontalAlignment="Center" FontSize="18"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Grid.Row="2" Margin="0, 0, 20, 0">
