@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -97,6 +98,11 @@
     <Compile Include="Glypho.xaml.cs">
       <DependentUpon>Glypho.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GlyphRecognition\ExtractedGlyphData.cs" />
+    <Compile Include="GlyphRecognition\Glyph.cs" />
+    <Compile Include="GlyphRecognition\GlyphDatabase.cs" />
+    <Compile Include="GlyphRecognition\GlyphRecognizer.cs" />
+    <Compile Include="GlyphRecognition\SquareBinaryGlyphRecognizer.cs" />
     <Compile Include="Lista.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
