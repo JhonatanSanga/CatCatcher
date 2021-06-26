@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CatCatcher"
         mc:Ignorable="d"
-        Title="Cat Catcher" Height="462" Width="708" MinHeight="410" MinWidth="586" WindowStartupLocation="CenterScreen">
+        Title="Cat Catcher" Height="462" Width="708" MinHeight="410" MinWidth="586" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
     <ScrollViewer>
         <Grid>
             <Grid.ColumnDefinitions>

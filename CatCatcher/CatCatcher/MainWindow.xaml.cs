@@ -51,7 +51,10 @@ namespace CatCatcher
         private VideoCaptureDevice _videoSource;//IVideoSource
 
         #endregion
-
+        #region variables Arduino
+        System.IO.Ports.SerialPort arduino;
+        bool detect = true;
+        #endregion
         public ObservableCollection<VideoCapabilities> VideoCapabilities { get; set; }
 
         public MainWindow()
@@ -60,9 +63,12 @@ namespace CatCatcher
             InitializeComponent();
             this.DataContext = this;
             GetVideoDevices();
-
-
-            
+            #region Arduino
+            arduino = new System.IO.Ports.SerialPort();
+            arduino.PortName = "COM5";
+            arduino.BaudRate = 9600;
+            arduino.Open();
+            #endregion
 
             this.Closing += MainWindow_Closing;
         }
@@ -106,11 +112,17 @@ namespace CatCatcher
                             {
                                 lblFind.Foreground = System.Windows.Media.Brushes.LightGreen;
                                 lblFind.Content = "Encontrado";
+                                if (detect==true)
+                                {
+                                    arduino.Write("E");
+                                    detect = false;
+                                }
                             }
                             else
                             {
                                 lblFind.Foreground = System.Windows.Media.Brushes.Red;
                                 lblFind.Content = "No encontrado";
+                                detect = true;
                             }
                         }
                         //Dispatcher.BeginInvoke(new ThreadStart(delegate { imageCapture.Source = bi; }));
@@ -218,5 +230,13 @@ namespace CatCatcher
         }
 
         #endregion
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            if (arduino.IsOpen)
+            {
+                arduino.Close();
+            }
+        }
     }
 }

@@ -28,3 +28,33 @@ C:\Users\PC-2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.exe
 C:\Users\PC-2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.pdb
 C:\Users\PC-2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\Glypho.g.cs
 C:\Users\PC-2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\Glypho.baml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\CatCatcher.exe.config
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\CatCatcher.exe
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\CatCatcher.pdb
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.dll
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Imaging.dll
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Math.dll
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Video.DirectShow.dll
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Video.dll
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Vision.dll
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.xml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Imaging.xml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Math.xml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Video.xml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Video.DirectShow.xml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\bin\Debug\AForge.Vision.xml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.csprojAssemblyReference.cache
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\Glypho.g.cs
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\MainWindow.g.cs
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\App.g.cs
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher_MarkupCompile.cache
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher_MarkupCompile.lref
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\Glypho.baml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\MainWindow.baml
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.g.resources
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.Properties.Resources.resources
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.csproj.GenerateResource.cache
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.csproj.CoreCompileInputs.cache
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.csproj.CopyComplete
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.exe
+E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.pdb
