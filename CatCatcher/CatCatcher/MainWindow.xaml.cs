@@ -59,16 +59,17 @@ namespace CatCatcher
 
         public MainWindow()
         {
-            System.Threading.Thread.Sleep(4444);//que buenos tiempos no? :3
             InitializeComponent();
+            
+
             this.DataContext = this;
-            GetVideoDevices();
+            GetVideoDevices();/*
             #region Arduino
             arduino = new System.IO.Ports.SerialPort();
             arduino.PortName = "COM5";
             arduino.BaudRate = 9600;
             arduino.Open();
-            #endregion
+            #endregion*/
 
             this.Closing += MainWindow_Closing;
         }
@@ -82,9 +83,11 @@ namespace CatCatcher
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
+            //SelectedGlyph.glyph = SelectedGlyph.glyphs[2];
             StartCamera();
         }
         byte count = 0;//contador para que haga una busqueda cada 5 frames
+        DateTime lastDetection;
         private void video_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
             try
@@ -92,30 +95,45 @@ namespace CatCatcher
                 BitmapImage bi;
                 using (var bitmap = (Bitmap)eventArgs.Frame.Clone())
                 {
+                    GlyphRecognition.GlyphRecognizer glyphRecognizer;
                     Application.Current.Dispatcher.Invoke(new Action(() =>
                     {
-
-                        GlyphRecognition.GlyphRecognizer glyphRecognizer;
                         glyphRecognizer = new GlyphRecognition.GlyphRecognizer(new GlyphRecognition.GlyphDatabase(5));
-                        glyphRecognizer.GlyphDatabase.Add(new GlyphRecognition.Glyph("nuevo", new byte[,] {
-                            { 0, 0, 0, 0, 0},
-                            { 0, 1, 1, 0, 0},
-                            { 0, 0, 1, 1, 0},
-                            { 0, 1, 1, 0, 0},
-                            { 0, 0, 0, 0, 0}}));
+                        glyphRecognizer.GlyphDatabase.Add(new GlyphRecognition.Glyph("nuevo", SelectedGlyph.glyph));
+                        glyphRecognizer.GlyphDatabase.Replace("nuevo", new GlyphRecognition.Glyph("nuevo", SelectedGlyph.glyph));
+                        //glyphRecognizer.GlyphDatabase.Remove("nuevo");
+                        //glyphRecognizer.GlyphDatabase.Replace("nuevo", new GlyphRecognition.Glyph("nuevo", SelectedGlyph.glyph));
 
                         count++;
                         if (count >= 5)
                         {
                             count = 0;///////////////////////////////////////
-                            if (glyphRecognizer.FindGlyphs(bitmap).Count > 1)
+                            if (glyphRecognizer.FindGlyphs(bitmap).Count > 0)
                             {
                                 lblFind.Foreground = System.Windows.Media.Brushes.LightGreen;
                                 lblFind.Content = "Encontrado";
-                                if (detect==true)
+                                /*if (detect==true)
                                 {
                                     arduino.Write("E");
                                     detect = false;
+                                }*/
+                                if (lastDetection != null)
+                                {
+                                    DateTime currentDetection = DateTime.Now;
+                                    if (lastDetection.Second + Emails.frequency < currentDetection.Second)
+                                    {
+                                        lastDetection = currentDetection;
+
+                                        //Thread thread = new Thread(delegate ()
+                                        //{
+                                            Emails.SendEmail(Emails.email, bitmap);
+                                        //});
+                                        //thread.Start();
+                                    }
+                                }
+                                else
+                                {
+                                    lastDetection = DateTime.Now;
                                 }
                             }
                             else
@@ -125,6 +143,7 @@ namespace CatCatcher
                                 detect = true;
                             }
                         }
+                        glyphRecognizer.GlyphDatabase.Remove("nuevo");
                         //Dispatcher.BeginInvoke(new ThreadStart(delegate { imageCapture.Source = bi; }));
                     }));
                     bi = bitmap.ToBitmapImage();////
@@ -232,11 +251,11 @@ namespace CatCatcher
         #endregion
 
         private void Window_Closing(object sender, CancelEventArgs e)
-        {
+        {/*
             if (arduino.IsOpen)
             {
                 arduino.Close();
-            }
+            }*/
         }
     }
 }

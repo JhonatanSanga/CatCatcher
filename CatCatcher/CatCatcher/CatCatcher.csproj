@@ -81,6 +81,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Emails.cs" />
+    <Compile Include="SelectedGlyph.cs" />
     <Page Include="Glypho.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <SplashScreen Include="Media\splashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\glyph00.jpg" />
+    <Resource Include="Media\glyph01.jpg" />
+    <Resource Include="Media\glyph02.jpg" />
+    <Resource Include="Media\glyph03.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
