@@ -5,34 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CatCatcher"
         mc:Ignorable="d"
-        Title="Glypho" Height="285.334" Width="236.666" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Glypho" Height="316.334" Width="611.666" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="90,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="130,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="170,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt00" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="50,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt01" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="90,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt02" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="130,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="170,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt10" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="50,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt11" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="90,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt12" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="130,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="170,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="10,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt20" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="50,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt21" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="90,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox x:Name="txt22" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="130,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="170,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="10,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="50,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="90,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="130,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="35" Text="0" FontSize="23" HorizontalContentAlignment="Center" Margin="170,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
-        <Button x:Name="btnConfirm" Content="CONFIRMAR" HorizontalAlignment="Left" Margin="60,210,0,0" VerticalAlignment="Top" Width="95" Height="28" Click="BtnConfirm_Click"/>
+        <Image HorizontalAlignment="Left" Height="140" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph00.jpg"/>
+        <Image HorizontalAlignment="Left" Height="140" Margin="155,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph01.jpg"/>
+        <Image HorizontalAlignment="Left" Height="140" Margin="300,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph02.jpg"/>
+        <Image HorizontalAlignment="Left" Height="140" Margin="445,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph03.jpg"/>
+        <Button x:Name="btnConfirm00" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="31,150,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="BtnConfirm_Click"/>
+        <Button x:Name="btnConfirm01" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="180,150,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="BtnConfirm_Click1"/>
+        <Button x:Name="btnConfirm02" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="324,150,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="BtnConfirm_Click2"/>
+        <Button x:Name="btnConfirm03" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="469,150,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="BtnConfirm_Click3"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="25" Margin="97,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <Label Content="Correo:" HorizontalAlignment="Left" Margin="48,206,0,0" VerticalAlignment="Top"/>
+        <Label Content="Frecuencia de envio: Cada" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFreq" HorizontalAlignment="Left" Height="23" Margin="158,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <Label Content="segundos (minimo 20 segundos o le da algo al programa :v)" HorizontalAlignment="Left" Margin="207,240,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
