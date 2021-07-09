@@ -108,39 +108,50 @@ namespace CatCatcher
                         if (count >= 5)
                         {
                             count = 0;///////////////////////////////////////
-                            if (glyphRecognizer.FindGlyphs(bitmap).Count > 0)
+                            var processedOrjinalBitmap = bitmap.FindObjectsOnOriginal(penColor: System.Drawing.Color.Red, filterColor: System.Drawing.Color.FromArgb(151, 0, 0), multiple: false);
+                            bi = BitmapHelpers.ToBitmapImage(processedOrjinalBitmap);
+                            if (BitmapExtensions.colorDetecter)
                             {
-                                lblFind.Foreground = System.Windows.Media.Brushes.LightGreen;
-                                lblFind.Content = "Encontrado";
-                                /*if (detect==true)
+                                lblEstado.Content = "Gato encontrado";
+                                if (glyphRecognizer.FindGlyphs(bitmap).Count > 0)
                                 {
-                                    arduino.Write("E");
-                                    detect = false;
-                                }*/
-                                if (lastDetection != null)
-                                {
-                                    DateTime currentDetection = DateTime.Now;
-                                    if (lastDetection.Second + Emails.frequency < currentDetection.Second)
+                                    lblFind.Foreground = System.Windows.Media.Brushes.LightGreen;
+                                    lblFind.Content = "Encontrado";
+                                    /*if (detect==true)
                                     {
-                                        lastDetection = currentDetection;
+                                        arduino.Write("E");
+                                        detect = false;
+                                    }*/
+                                    if (lastDetection != null)
+                                    {
+                                        DateTime currentDetection = DateTime.Now;
+                                        if (lastDetection.Second + Emails.frequency < currentDetection.Second)
+                                        {
+                                            lastDetection = currentDetection;
 
-                                        //Thread thread = new Thread(delegate ()
-                                        //{
+                                            //Thread thread = new Thread(delegate ()
+                                            //{
                                             Emails.SendEmail(Emails.email, bitmap);
-                                        //});
-                                        //thread.Start();
+                                            //});
+                                            //thread.Start();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        lastDetection = DateTime.Now;
                                     }
                                 }
                                 else
                                 {
-                                    lastDetection = DateTime.Now;
+                                    lblFind.Foreground = System.Windows.Media.Brushes.Red;
+                                    lblFind.Content = "No encontrado";
+                                    detect = true;
                                 }
                             }
                             else
                             {
-                                lblFind.Foreground = System.Windows.Media.Brushes.Red;
-                                lblFind.Content = "No encontrado";
-                                detect = true;
+                                lblEstado.Content = "Gato no encontrado";
+                                lblFind.Content = " ";
                             }
                         }
                         glyphRecognizer.GlyphDatabase.Remove("nuevo");
