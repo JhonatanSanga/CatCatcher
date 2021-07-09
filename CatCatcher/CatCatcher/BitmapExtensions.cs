@@ -7,6 +7,7 @@ namespace CatCatcher
 {
     public static class BitmapExtensions
     {
+        public static bool colorDetecter=false;
         public static Bitmap EuclideanFilter(this Bitmap source, Color color, short radius = 100)
         {
             var image = (Bitmap)source.Clone();
@@ -75,15 +76,19 @@ namespace CatCatcher
                 ObjectsOrder = ObjectsOrder.Size
             };//constructor
 
-            /*var objectsData = image.LockBits(new Rectangle(0, 0, image.Width, image.Height), ImageLockMode.ReadOnly, image.PixelFormat);//guarda la informacion
+            var objectsData = image.LockBits(new Rectangle(0, 0, image.Width, image.Height), ImageLockMode.ReadOnly, image.PixelFormat);//guarda la informacion
             var grayscaleFilter = new Grayscale(0.2125, 0.7154, 0.0721);//crear un filtro
             grayscaleFilter.Apply(new UnmanagedImage(objectsData));//aplica el filtro
             image.UnlockBits(objectsData);//desbloque la informacion
-            */
+            
             blobCounter.ProcessImage(image);//construye los blobs
             var rects = blobCounter.GetObjectsRectangles();//
 
-            if (rects.Length <= 0) return orj;
+            if (rects.Length <= 0)
+            {
+                colorDetecter = false;
+                return orj;
+            }
 
             Graphics g = Graphics.FromImage(orj);
 
@@ -91,18 +96,17 @@ namespace CatCatcher
 
             for (int i = 0; rects.Length > i; i++)
             {
+                colorDetecter = true;
                 Rectangle objectRect = rects[i];
                 using (Pen pen = new Pen(Color.FromArgb(penColor.R, penColor.G, penColor.B), 8))
                 {
-                    //g.DrawRectangle(pen, objectRect);//dibuja el rectangulo
-                    g.DrawImage(System.Drawing.Image.FromFile(@"C:\Users\PC-2\Downloads\fotos\focus2.png"), objectRect);
+                    g.DrawRectangle(pen, objectRect);//dibuja el rectangulo
+                    //g.DrawImage(System.Drawing.Image.FromFile(@"C:\Users\PC-2\Downloads\fotos\focus2.png"), objectRect);
 
                     Lista.Coords.Add("X: " + objectRect.X + "Y: " + objectRect.Y);
 
-                    NativeMethods.SendMouseInput(objectRect.X, objectRect.Y, 1360, 768, false);
-
                     if (multiple)
-                        g.DrawString((i + 1).ToString(), new Font("Arial", 60), Brushes.Red, objectRect);//pone el numero
+                        g.DrawString((i + 1).ToString(), new Font("Arial", 30), Brushes.Red, objectRect);//pone el numero
                 }
 
                 if (multiple) continue;
