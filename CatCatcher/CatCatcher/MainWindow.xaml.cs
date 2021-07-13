@@ -125,16 +125,26 @@ namespace CatCatcher
                                     if (lastDetection != null)
                                     {
                                         DateTime currentDetection = DateTime.Now;
-                                        if (lastDetection.Second + Emails.frequency < currentDetection.Second)
+                                        lblCurrent.Content = currentDetection.ToString();
+                                        if (lastDetection.AddSeconds(Emails.frequency) < currentDetection)
                                         {
+                                            lblActual.Content = "SI";
                                             lastDetection = currentDetection;
 
                                             //Thread thread = new Thread(delegate ()
                                             //{
+                                            MessageBox.Show(lastDetection.ToString() + " - " + lastDetection.Second);
                                             Emails.SendEmail(Emails.email, bitmap);
                                             //});
                                             //thread.Start();
                                         }
+                                        else
+                                        {
+                                            lblActual.Content = "NO";
+                                        }
+                                        //lblCurrent.Content = lastDetection.ToString();
+                                        lblLast.Content = lastDetection + " - " + lastDetection.Second;
+                                        lblTime.Content = Emails.frequency + "";
                                     }
                                     else
                                     {
@@ -195,7 +205,7 @@ namespace CatCatcher
 
         private void BtnChangeGlypho_Click(object sender, RoutedEventArgs e)
         {
-            Glypho g = new Glypho();
+            VerGliphos g = new VerGliphos();
             g.Show();
         }
         

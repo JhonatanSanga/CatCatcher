@@ -40,6 +40,10 @@
             <StackPanel Grid.Column="1" Grid.Row="2" Margin="0, 0, 20, 0">
                 <Button x:Name="btnChangeGlypho" Content="click solo para ver los glifos&#xD;&#xA;eliminar el boton luego" Margin="0, 0, 0, 10" Height="46" Click="BtnChangeGlypho_Click"/>
             </StackPanel>
+            <Label Name="lblLast" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <Label Name="lblActual" Content="Label" HorizontalAlignment="Left" Margin="10,41,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <Label Name="lblTime" Content="Label" HorizontalAlignment="Left" Margin="175,10,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <Label x:Name="lblCurrent" Content="Label" HorizontalAlignment="Left" Margin="175,45,0,0" Grid.Row="2" VerticalAlignment="Top"/>
         </Grid>
     </ScrollViewer>
 </Window>

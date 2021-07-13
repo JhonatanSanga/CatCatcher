@@ -15,7 +15,7 @@
         <Button x:Name="btnConfirm01" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="180,150,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="BtnConfirm_Click1"/>
         <Button x:Name="btnConfirm02" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="324,150,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="BtnConfirm_Click2"/>
         <Button x:Name="btnConfirm03" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="469,150,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="BtnConfirm_Click3"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="25" Margin="97,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="25" Margin="97,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="428"/>
         <Label Content="Correo:" HorizontalAlignment="Left" Margin="48,206,0,0" VerticalAlignment="Top"/>
         <Label Content="Frecuencia de envio: Cada" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtFreq" HorizontalAlignment="Left" Height="23" Margin="158,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>

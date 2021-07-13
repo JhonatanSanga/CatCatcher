@@ -83,6 +83,9 @@
     </ApplicationDefinition>
     <Compile Include="Emails.cs" />
     <Compile Include="SelectedGlyph.cs" />
+    <Compile Include="VerGliphos.xaml.cs">
+      <DependentUpon>VerGliphos.xaml</DependentUpon>
+    </Compile>
     <Page Include="Glypho.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +113,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VerGliphos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NativeMethods.cs" />

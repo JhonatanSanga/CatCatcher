@@ -1,0 +1,16 @@
+﻿<Window x:Class="CatCatcher.VerGliphos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatCatcher"
+        mc:Ignorable="d"
+        Title="VerGliphos" Height="183.334" Width="611.666" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="140" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph00.jpg"/>
+        <Image HorizontalAlignment="Left" Height="140" Margin="155,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph01.jpg"/>
+        <Image HorizontalAlignment="Left" Height="140" Margin="300,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph02.jpg"/>
+        <Image HorizontalAlignment="Left" Height="140" Margin="445,10,0,0" VerticalAlignment="Top" Width="140" Source="Media/glyph03.jpg"/>
+
+    </Grid>
+</Window>
