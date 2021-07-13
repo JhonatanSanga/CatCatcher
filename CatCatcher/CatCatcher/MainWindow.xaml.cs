@@ -125,7 +125,7 @@ namespace CatCatcher
                                     if (lastDetection != null)
                                     {
                                         DateTime currentDetection = DateTime.Now;
-                                        lblCurrent.Content = currentDetection.ToString();
+                                        lblCurrent.Content = "Deteccion actual: " + currentDetection.ToString();
                                         if (lastDetection.AddSeconds(Emails.frequency) < currentDetection)
                                         {
                                             lblActual.Content = "SI";
@@ -133,7 +133,7 @@ namespace CatCatcher
 
                                             //Thread thread = new Thread(delegate ()
                                             //{
-                                            MessageBox.Show(lastDetection.ToString() + " - " + lastDetection.Second);
+                                            //MessageBox.Show(lastDetection.ToString() + " - " + lastDetection.Second);
                                             Emails.SendEmail(Emails.email, bitmap);
                                             //});
                                             //thread.Start();
@@ -143,8 +143,8 @@ namespace CatCatcher
                                             lblActual.Content = "NO";
                                         }
                                         //lblCurrent.Content = lastDetection.ToString();
-                                        lblLast.Content = lastDetection + " - " + lastDetection.Second;
-                                        lblTime.Content = Emails.frequency + "";
+                                        lblLast.Content = "Ultimo envio: " + lastDetection.ToString();
+                                        lblTime.Content = "Cada " + Emails.frequency + " segundos";
                                     }
                                     else
                                     {

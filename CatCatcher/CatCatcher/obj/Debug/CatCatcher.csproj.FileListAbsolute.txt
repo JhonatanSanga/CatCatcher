@@ -88,3 +88,5 @@ E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto_v2\CatCatcher\CatCatc
 E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto_v2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.csproj.CopyComplete
 E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto_v2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.exe
 E:\Univalle\Quinto Semestre\Procesamiento Digital\Proyecto_v2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\CatCatcher.pdb
+C:\Users\PC-2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\VerGliphos.g.cs
+C:\Users\PC-2\CatCatcher\CatCatcher\CatCatcher\obj\Debug\VerGliphos.baml
